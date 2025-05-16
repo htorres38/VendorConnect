@@ -4,11 +4,55 @@
     ViewData["Title"] = "Home";
 }
 
-<h1>Welcome to VendorConnect</h1>
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary">VendorConnect</h1>
+        <p class="lead">Professional vendor management for events</p>
+    </div>
 
-<p>This application manages Vendors and Events.</p>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card border-primary h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-building text-primary" style="font-size: 2rem;"></i>
+                    <h3 class="card-title mt-2">Vendors</h3>
+                    <p class="card-text">Manage photographers, florists, and caterers</p>
+                    <a asp-page="/Vendors/Index" class="btn btn-primary stretched-link">View</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card border-success h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check text-success" style="font-size: 2rem;"></i>
+                    <h3 class="card-title mt-2">Events</h3>
+                    <p class="card-text">Track weddings and vendor assignments</p>
+                    <a asp-page="/Events/Index" class="btn btn-success stretched-link">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<ul>
-    <li><a asp-page="/Vendors/Index">View Vendors</a></li>
-    <li><a asp-page="/Events/Index">View Events</a></li>
-</ul>
+    <div class="card mt-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">
+                <i class="bi bi-graph-up"></i> Quick Stats
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <td><strong>Active Vendors</strong></td>
+                            <td class="text-end">@Model.VendorCount</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Upcoming Events</strong></td>
+                            <td class="text-end">@Model.EventCount</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

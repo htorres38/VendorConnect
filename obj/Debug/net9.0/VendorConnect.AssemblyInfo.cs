@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VendorConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e033069fa353e101f6f5d3f1b9fc80660fea6eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbf0bf484ab50000d73ffd9782719e206f48a3ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("VendorConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VendorConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
