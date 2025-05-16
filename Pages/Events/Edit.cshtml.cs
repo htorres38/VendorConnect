@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 using VendorConnect.Data;
 using VendorConnect.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace VendorConnect.Pages.Events
 {
@@ -24,15 +25,14 @@ namespace VendorConnect.Pages.Events
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            Event = await _context.Events.FindAsync(id);
+            Event = await _context.Events
+                                  .Include(e => e.Vendor)
+                                  .FirstOrDefaultAsync(m => m.ID == id);
 
             if (Event == null)
-            {
                 return NotFound();
-            }
 
-            VendorList = new SelectList(_context.Vendors, "ID", "BusinessName", Event.VendorID);
-
+            VendorList = new SelectList(_context.Vendors, "ID", "BusinessName");
             return Page();
         }
 
@@ -40,7 +40,7 @@ namespace VendorConnect.Pages.Events
         {
             if (!ModelState.IsValid)
             {
-                VendorList = new SelectList(_context.Vendors, "ID", "BusinessName", Event.VendorID);
+                VendorList = new SelectList(_context.Vendors, "ID", "BusinessName");
                 return Page();
             }
 
@@ -52,22 +52,13 @@ namespace VendorConnect.Pages.Events
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EventExists(Event.ID))
-                {
+                if (!_context.Events.Any(e => e.ID == Event.ID))
                     return NotFound();
-                }
                 else
-                {
                     throw;
-                }
             }
 
             return RedirectToPage("./Index");
-        }
-
-        private bool EventExists(int id)
-        {
-            return _context.Events.Any(e => e.ID == id);
         }
     }
 }

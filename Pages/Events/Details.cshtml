@@ -1,7 +1,10 @@
-@page "{id:int}"
+@page
 @model VendorConnect.Pages.Events.DetailsModel
+@{
+    ViewData["Title"] = "Event Details";
+}
 
-<h2>Event Details</h2>
+<h1>Event Details</h1>
 
 <div>
     <h4>Event</h4>
@@ -18,5 +21,7 @@
     </dl>
 </div>
 
-<a asp-page="./Edit" asp-route-id="@Model.Event.ID">Edit</a> |
-<a asp-page="./Index">Back to List</a>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Event.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,26 +1,31 @@
 @page
 @model VendorConnect.Pages.Events.CreateModel
+@{
+    ViewData["Title"] = "Create Event";
+}
 
-<h2>Create Event</h2>
+<h1>Create Event</h1>
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Event.CoupleNames"></label>
+        <label asp-for="Event.CoupleNames" class="control-label"></label>
         <input asp-for="Event.CoupleNames" class="form-control" />
         <span asp-validation-for="Event.CoupleNames" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Event.EventDate"></label>
-        <input asp-for="Event.EventDate" class="form-control" type="date" />
+        <label asp-for="Event.EventDate" class="control-label"></label>
+        <input asp-for="Event.EventDate" class="form-control" />
         <span asp-validation-for="Event.EventDate" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Event.VendorID">Vendor</label>
-        <select asp-for="Event.VendorID" class="form-control" asp-items="Model.VendorList"></select>
+        <label asp-for="Event.VendorID" class="control-label">Vendor</label>
+        <select asp-for="Event.VendorID" class="form-control" asp-items="Model.VendorList">
+            <option value="">-- Select Vendor --</option>
+        </select>
         <span asp-validation-for="Event.VendorID" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
-    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary">Create</button> |
+    <a asp-page="./Index">Back to List</a>
 </form>
 
 @section Scripts {

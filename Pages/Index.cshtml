@@ -1,10 +1,14 @@
 ﻿@page
-@model IndexModel
+@model VendorConnect.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Welcome to VendorConnect</h1>
+
+<p>This application manages Vendors and Events.</p>
+
+<ul>
+    <li><a asp-page="/Vendors/Index">View Vendors</a></li>
+    <li><a asp-page="/Events/Index">View Events</a></li>
+</ul>

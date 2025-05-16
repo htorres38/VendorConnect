@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using VendorConnect.Data;
 using VendorConnect.Models;
+using System.Threading.Tasks;
 
 namespace VendorConnect.Pages.Events
 {
@@ -36,7 +36,6 @@ namespace VendorConnect.Pages.Events
 
             _context.Events.Add(Event);
             await _context.SaveChangesAsync();
-
             return RedirectToPage("./Index");
         }
     }
