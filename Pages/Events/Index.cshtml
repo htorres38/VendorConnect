@@ -1,0 +1,46 @@
+@page
+@model VendorConnect.Pages.Events.IndexModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h1>Events</h1>
+
+<form method="get">
+    <p>
+        Search by couple name: <input type="text" name="SearchString" value="@Model.SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.CoupleSort">Couple Names</a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">Event Date</a>
+            </th>
+            <th>Vendor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Events)
+{
+        <tr>
+            <td>@item.CoupleNames</td>
+            <td>@item.EventDate.ToShortDateString()</td>
+            <td>@item.Vendor?.BusinessName</td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<a asp-page="./Create" class="btn btn-primary">Create New Event</a>

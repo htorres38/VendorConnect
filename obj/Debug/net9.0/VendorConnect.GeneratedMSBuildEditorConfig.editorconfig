@@ -32,6 +32,26 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Events/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Events/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Events/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Events/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +62,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Vendors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Vendors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Vendors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Vendors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/Vendors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lenovo/OneDrive/Desktop/CIDM 3312/VendorConnect/Pages/_ViewImports.cshtml]

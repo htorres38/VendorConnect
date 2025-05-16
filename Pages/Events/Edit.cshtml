@@ -1,0 +1,33 @@
+@page "{id:int}"
+@model VendorConnect.Pages.Events.EditModel
+
+<h2>Edit Event</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Event.ID" />
+    
+    <div class="form-group">
+        <label asp-for="Event.CoupleNames"></label>
+        <input asp-for="Event.CoupleNames" class="form-control" />
+        <span asp-validation-for="Event.CoupleNames" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Event.EventDate"></label>
+        <input asp-for="Event.EventDate" class="form-control" type="date" />
+        <span asp-validation-for="Event.EventDate" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Event.VendorID">Vendor</label>
+        <select asp-for="Event.VendorID" class="form-control" asp-items="Model.VendorList"></select>
+        <span asp-validation-for="Event.VendorID" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
